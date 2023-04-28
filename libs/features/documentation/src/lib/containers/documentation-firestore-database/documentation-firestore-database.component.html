@@ -1,0 +1,51 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Firestore Database</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/environment-setup/firestore-database"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			Firestore database provides realtime updates, powerful queries, and
+			automatic scaling
+		</p>
+		<p>Select 'Firestore Database' from the 'Build' menu in the sidebar.</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firestore-database/firebase-menu-database.png"
+			alt="Firebase console: database menu"
+			height="666"
+			width="421"
+		/>
+		<p>Select 'Create database'</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firestore-database/firebase-create-database.png"
+			alt="Firebase console: create database"
+			height="395"
+			width="889"
+		/>
+		<p>Select the 'Start in <b>test mode</b>' option and click 'Next'</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firestore-database/firebase-create-database-rules.png"
+			alt="Firebase console: database rules"
+			height="585"
+			width="843"
+		/>
+		<p>
+			Select the region closest to you or the majority of your users and
+			click 'Enable'.
+		</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firestore-database/firebase-create-database-region.png"
+			alt="Firebase console: database region"
+			height="666"
+			width="421"
+		/>
+		<p>
+			You will then be redirected to your Firestore database and it will
+			be ready for use.
+		</p>
+	</div>
+</div>

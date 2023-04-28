@@ -1,0 +1,55 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Firebase Authentication</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/environment-setup/firebase-authentication"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			Firebase Authentication lets you add an end-to-end identity solution
+			to your app for easy user authentication, sign-in, and onboarding
+		</p>
+		<p>
+			Google reference:
+			<a href="https://firebase.google.com/docs/auth" target="_blank"
+				>https://firebase.google.com/docs/auth</a
+			>
+		</p>
+		<p>Enable Firebase authentication</p>
+		<p>From the 'Build' menu in the sidebar, select 'Authentication'</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-authentication/firebase-menu-authentication.png"
+			alt="Firebase console: Authentication menu"
+			height="666"
+			width="421"
+		/>
+		<p>Select 'Get started'</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-authentication/firebase-authentication-get-started.png"
+			alt="Firebase console: Authentication get started"
+			height="414"
+			width="760"
+		/>
+		<p>Under 'Native providers' select 'Email/Password'</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-authentication/firebase-authentication-providers.png"
+			alt="Firebase console: Authentication providers"
+			height="591"
+			width="1355"
+		/>
+		<p>Enable 'Email/Password' and click 'Save'</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-authentication/firebase-authentication-providers-email-password.png"
+			alt="Firebase console: Authentication providers email and password"
+			height="638"
+			width="1313"
+		/>
+		<p>
+			Your project is now ready to handle incoming authentication
+			requests.
+		</p>
+	</div>
+</div>

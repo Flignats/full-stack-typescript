@@ -1,0 +1,35 @@
+<div class="theme-wrapper">
+	<mat-drawer-container class="example-container" autosize>
+		<mat-drawer #drawer class="example-sidenav" mode="push">
+			<full-stack-typescript-app-sidenav
+				(navigate)="onNavigate($event); drawer.close()"
+				(toggleSidenav)="drawer.toggle()"
+				[currentView]="currentView$ | async"
+			></full-stack-typescript-app-sidenav>
+		</mat-drawer>
+
+		<div class="example-sidenav-content">
+			<div class="wrapper">
+				<div class="toolbar">
+					<full-stack-typescript-app-toolbar
+						(isAccountDetailsLoaded)="onIsAccountDetailsLoaded()"
+						(isAuthed)="onIsAuthed()"
+						[isAccountLoaded]="isAccountLoaded$ | async"
+						(navigate)="onNavigate($event); drawer.close()"
+						(toggleSidenav)="drawer.toggle()"
+						[currentView]="currentView$ | async"
+						[isAuthenticated]="isAuthenticated$ | async"
+					></full-stack-typescript-app-toolbar>
+				</div>
+				<div class="content">
+					<router-outlet #o="outlet"></router-outlet>
+				</div>
+				<div class="footer">
+					<full-stack-typescript-app-footer
+						(navigate)="onNavigate($event); drawer.close()"
+					></full-stack-typescript-app-footer>
+				</div>
+			</div>
+		</div>
+	</mat-drawer-container>
+</div>

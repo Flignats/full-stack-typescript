@@ -1,0 +1,118 @@
+<div class="view-icon-examples" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Icons</h1>
+	<div class="intro color-grey">
+		<div class="intro__example-icons">
+			<full-stack-typescript-icons
+				[name]="'bitcoin'"
+				[color]="'#b5a33f'"
+				[height]="'50'"
+				[width]="'50'"
+			></full-stack-typescript-icons>
+			<full-stack-typescript-icons
+				[name]="'menuHamburger'"
+				[color]="'#b5a33f'"
+				[height]="'50'"
+				[width]="'50'"
+			></full-stack-typescript-icons>
+			<full-stack-typescript-icons
+				[name]="'menuMeatballsHorizontal'"
+				[color]="'#b5a33f'"
+				[height]="'50'"
+				[width]="'50'"
+			></full-stack-typescript-icons>
+			<full-stack-typescript-icons
+				[name]="'menuMeatballsVertical'"
+				[color]="'#b5a33f'"
+				[height]="'50'"
+				[width]="'50'"
+			></full-stack-typescript-icons>
+		</div>
+		<p>
+			Icons are a feature used by nearly all applications. 3rd party
+			solutions, such as Material Icons and Font Awesome are popular for
+			choices in early-stage development.
+		</p>
+		<p>
+			However, these solutions are not the most performant and are quickly
+			pivoted from when enterprises need icons to align with their brand
+			or do not provide all necessary icons. Unfortunately, building a
+			scalable icon library from scratch is no easy task.
+		</p>
+		<h2>Icons that don't sacrifice performance</h2>
+		<p>
+			Performance is always a top priority and delivering icons shouldn't
+			sacrifice the hard work that goes into keeping applications fast.
+			It's not uncommon seeing icon libraries total in the hundreds of
+			icons considering all the different devices and views used to
+			communicate effectively to the end user.
+		</p>
+		<p>
+			Therefore, the application mustn't deliver deliver an icon until
+			they are required. This is why tree-shaking is so important!
+		</p>
+		<p>
+			This is why Full Stack Typescript already provides a highly
+			performant, tree-shakable library ready to use your custom icons!
+		</p>
+		<p>
+			Further technical and implementation information can be reviewed
+			here: <a href="/">Icon documentation</a>
+		</p>
+		<h2>SVG icons only</h2>
+		<p>
+			SVG icons, as opposed to font icons, are the preferred method for
+			the best performance and the most amount of features. The following
+			considerations were made to arrive at SVG icons.
+		</p>
+		<ul>
+			<li>
+				SVG icons are just code, so they can be bundled into javascript
+				files
+			</li>
+			<li>
+				Code can be easily tree tree-shakable and leverage an icon
+				registry for easy access
+			</li>
+			<li>File size between SVG icons and font icons are neglibable</li>
+			<li>SVG icons have superior accessibility than font icons</li>
+			<li>SVG icons do not require additional HTTP requests</li>
+			<li>
+				SVG icons are sharp and pixel-perfect at all resolutions without
+				suffering any noticeable degradation
+			</li>
+			<li>
+				SVG icons offer a much higher degree of versatility as compared
+				to icon fonts in terms of modifications, styling control, and
+				animation
+			</li>
+			<li>
+				It is much easier to position SVG icons as compared to icon
+				fonts
+			</li>
+			<li>New SVG icons can easily be added with a few lines of code</li>
+		</ul>
+		<h2>Simple implementation and easy to use</h2>
+		<p>
+			When your designer/team member is ready to deliver a new SVG icon,
+			these simple steps are all that is needed to start using the new
+			icon.
+		</p>
+		<ul>
+			<li>Define the new SVG icon in a type-safe format in its file</li>
+			<li>
+				Register the icon in the features that display the icon,
+				preferably lazy-loaded
+			</li>
+		</ul>
+		<h2>Customize the icon directly in the template</h2>
+		<p>
+			Since SVG icons are highly versatile, the following properties are
+			ready to customize.
+		</p>
+		<ul>
+			<li>Clickability, with event management</li>
+			<li>Color</li>
+			<li>Size: height, width</li>
+		</ul>
+	</div>
+</div>

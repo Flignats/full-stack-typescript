@@ -1,0 +1,9 @@
+<div
+	class="icon-container"
+	(click)="onIconClicked()"
+	[style.width.px]="width"
+	[style.height.px]="height"
+	[ngClass]="{ 'icon-container--clickable': isClickable }"
+>
+	<ng-content></ng-content>
+</div>

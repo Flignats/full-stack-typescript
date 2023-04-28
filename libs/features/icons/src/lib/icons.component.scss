@@ -1,0 +1,7 @@
+// .icon-container {}
+
+.icon-container--clickable {
+	&:hover {
+		cursor: pointer;
+	}
+}

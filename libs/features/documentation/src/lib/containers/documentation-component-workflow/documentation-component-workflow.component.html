@@ -1,0 +1,63 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Component Workflow</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/workflows/development-workflow/component-workflow"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			Components are fundamental building blocks of the application's user
+			interface responsible for displaying and controlling a parts of the
+			view
+		</p>
+		<p>Component library location:</p>
+		<pre><code [highlight]="libraryLocation"></code></pre>
+		<ul>
+			<li>
+				<b>Do</b> generate a component library for isolated components
+			</li>
+			<li><b>Do</b> keep components dumb or presentational</li>
+			<li>
+				<b>Do</b> communicate through
+				<span class="color-purple">@Input</span> and
+				<span class="color-purple">@Output</span>
+			</li>
+			<li>
+				<b>Do</b> use <span class="color-purple">OnPush</span> change
+				detection
+			</li>
+			<li>
+				<b>Do</b> use
+				<span class="color-purple">standalone</span> component
+				architecture
+			</li>
+			<li>
+				<b>Do</b> use the
+				<span class="color-purple">--flat</span> architecture
+			</li>
+		</ul>
+		<ul>
+			<li><span class="color-red">Avoid</span> --inlineStyle option</li>
+			<li>
+				<span class="color-red">Avoid</span> --inlineTemplate option
+			</li>
+		</ul>
+		<h2>Component library generator options</h2>
+		<p>Run the below command to view all library options:</p>
+		<pre><code [highlight]="libraryOptionsCommand"></code></pre>
+		<p>
+			Components options reference:
+			<a
+				href="https://nx.dev/packages/angular/generators/component"
+				target="_blank"
+				>https://nx.dev/packages/angular/generators/component</a
+			>
+		</p>
+		<h2>Generate a component library</h2>
+		<p>Run the below command to generate a component library:</p>
+		<pre><code [highlight]="libraryGenerateCommand"></code></pre>
+	</div>
+</div>

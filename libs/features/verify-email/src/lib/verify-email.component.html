@@ -1,0 +1,12 @@
+<div class="view-verify-email" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Send a Verification email</h1>
+	<div class="verify-actions">
+		<button
+			mat-raised-button
+			color="primary"
+			(click)="onSendVerificationEmail()"
+		>
+			Send email
+		</button>
+	</div>
+</div>

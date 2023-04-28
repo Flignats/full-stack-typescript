@@ -1,0 +1,33 @@
+.app-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	height: 300px;
+	padding: 3em;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+	text-align: center;
+
+	li {
+		display: inline-block;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&::after {
+			padding: 0 1rem;
+			content: '|';
+		}
+
+		&:last-child {
+			&::after {
+				content: none;
+			}
+		}
+	}
+}

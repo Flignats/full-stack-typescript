@@ -1,0 +1,32 @@
+{
+	"name": "full-stack-typescript-e2e",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "apps/full-stack-typescript-e2e/src",
+	"projectType": "application",
+	"targets": {
+		"e2e": {
+			"executor": "@nrwl/cypress:cypress",
+			"options": {
+				"cypressConfig": "apps/full-stack-typescript-e2e/cypress.config.ts",
+				"devServerTarget": "full-stack-typescript:serve:development",
+				"testingType": "e2e"
+			},
+			"configurations": {
+				"production": {
+					"devServerTarget": "full-stack-typescript:serve:production"
+				}
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": [
+					"apps/full-stack-typescript-e2e/**/*.{js,ts}"
+				]
+			}
+		}
+	},
+	"tags": [],
+	"implicitDependencies": ["full-stack-typescript"]
+}

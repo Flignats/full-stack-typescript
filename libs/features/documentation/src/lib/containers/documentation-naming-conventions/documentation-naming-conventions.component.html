@@ -1,0 +1,118 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Naming Conventions</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/styleguide/naming-conventions"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			Naming conventions are hugely important to maintainability and
+			readability. This guide recommends naming conventions for the file
+			name and the symbol name.
+		</p>
+		<h2>General naming guidelines</h2>
+		<ul>
+			<li><b>Do</b> use consistent names for all symbols</li>
+			<li>
+				<b>Do</b> follow a pattern that describes the symbol's feature
+				then its type. The recommended pattern is
+				<span class="color-purple">feature.type.ts</span>
+			</li>
+		</ul>
+		<h2>Separate file names with dots and dashes</h2>
+		<ul>
+			<li>
+				<b>Do</b> use dashes to separate words in the descriptive name
+			</li>
+			<li>
+				<b>Do</b> use dots to separate the descriptive name from the
+				type
+			</li>
+			<li>
+				<b>Do</b> use consistent type names for all components following
+				a pattern that describes the component's feature then its type.
+				A recommended pattern is
+				<span class="color-purple">feature.type.ts</span>
+			</li>
+			<li>
+				<b>Do</b> use conventional type names including
+				<ul>
+					<li><span class="color-purple">.actions</span></li>
+					<li><span class="color-purple">.component</span></li>
+					<li><span class="color-purple">.constant</span></li>
+					<li><span class="color-purple">.directive</span></li>
+					<li><span class="color-purple">.effects</span></li>
+					<li><span class="color-purple">.facade</span></li>
+					<li><span class="color-purple">.guard</span></li>
+					<li><span class="color-purple">.interface</span></li>
+					<li><span class="color-purple">.module</span></li>
+					<li><span class="color-purple">.pipe</span></li>
+					<li><span class="color-purple">.reducer</span></li>
+					<li><span class="color-purple">.resolver</span></li>
+					<li><span class="color-purple">.routes</span></li>
+					<li><span class="color-purple">.selectors</span></li>
+					<li><span class="color-purple">.service</span></li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			Invent additional type names if you must but take care not to create
+			too many.
+		</p>
+		<h2>Symbols and file names</h2>
+		<ul>
+			<li>
+				<b>Do</b> use consistent names for all assets named after what
+				they represent
+			</li>
+			<li><b>Do</b> use upper camel case for class names</li>
+			<li>
+				<b>Do</b> match the name of the symbol to the name of the file
+			</li>
+			<li>
+				<b>Do</b> append the symbol name with the conventional suffix
+				(such as
+				<span class="color-purple"
+					>Component, Directive, Module, Pipe, or Service</span
+				>) for a thing of that type
+			</li>
+			<li>
+				<b>Do</b> give the filename the conventional suffix (such as
+				<span class="color-purple"
+					>.component.ts, .directive.ts, .module.ts, .pipe.ts, or
+					.service.ts</span
+				>) for a file of that type
+			</li>
+		</ul>
+		<h2>Analytics naming guidelines</h2>
+		<ul>
+			<li>
+				<b>Do</b> use <span class="color-purple">lowercase</span> for
+				names and properties
+			</li>
+			<li>
+				<b>Do</b> use <span class="color-purple">underscores</span> to
+				separate words
+			</li>
+			<li><b>Do</b> start with a letter</li>
+			<li><b>Do</b> use only letters, numbers, and underscores</li>
+			<li><b>Do</b> follow Google's naming rules</li>
+		</ul>
+		<p>
+			Reference:
+			<a
+				href="https://support.google.com/analytics/answer/13316687?hl=en&ref_topic=13367860#zippy=%2Cmobile-android-and-ios%2Cweb"
+				target="_blank"
+				>Google's event naming rules</a
+			>
+		</p>
+		<ul>
+			<li><span class="color-red">Avoid</span> spaces</li>
+			<li><span class="color-red">Avoid</span> reserved event names</li>
+			<li><span class="color-red">Avoid</span> reserved prefixes</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,176 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Firebase Project Setup</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/environment-setup/firebase-project-setup"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			Build powerful apps. Spin up your backend without managing servers.
+			Effortlessly scale to support millions of users with Firebase
+			databases, machine learning infrastructure, hosting, push
+			notifications & messaging, and storage features.
+		</p>
+		<p>
+			Google reference:
+			<a href="https://firebase.google.com/docs/build" target="_blank"
+				>https://firebase.google.com/docs/build</a
+			>
+		</p>
+		<h2>Setup Firebase project</h2>
+		<p>
+			While signed in to the primary Google account that will manage your
+			project, navigate to the Firebase console:
+			<a href="https://console.firebase.google.com/u/0/" target="_blank"
+				>https://console.firebase.google.com/u/0/</a
+			>
+		</p>
+		<p>Click on 'Add project'</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/add-firebase-project.png"
+			alt="Firebase console: add project"
+			height="396"
+			width="790"
+		/>
+		<p>
+			Enter your project name. This should be the same name that you will
+			use for your application.
+		</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/name-firebase-project.webp"
+			alt="Firebase console: name project"
+			height="693"
+			width="834"
+		/>
+		<p>Continue with Google Analytics enabled.</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/firebase-project-google-analytics.webp"
+			alt="Firebase console: google analytics"
+			height="841"
+			width="817"
+		/>
+		<p>Select a new Google Analytics account from the dropdown menu</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/firebase-project-google-analytics.webp"
+			alt="Firebase console: google analytics"
+			height="841"
+			width="817"
+		/>
+		<p>Select a new Google Analytics account from the dropdown menu</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/firebase-project-google-analytics-account-name.webp"
+			alt="Firebase console: google analytics account name"
+			height="650"
+			width="873"
+		/>
+		<p>
+			Use the default Google Analytics settings, Accept the Google
+			Analytics Terms, and Create project.
+		</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/firebase-project-google-analytics-settings.webp"
+			alt="Firebase console: google analytics account settings"
+			height="851"
+			width="854"
+		/>
+		<p>
+			Google will then setup your new firebase project and redirect you to
+			the project console.
+		</p>
+		<p>
+			This application requires your account to be setup on the Blaze plan
+			or higher. There is no cost to use the Google services and a billing
+			limit will be implemented to safely prevent unexpected charges.
+		</p>
+		<p>From the sidebar menu, near the bottom, select 'Upgrade'.</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/firebase-menu-upgrade.webp"
+			alt="Firebase console: upgrade plan"
+			height="933"
+			width="260"
+		/>
+		<p>Select the 'Blaze' pay as you go plan.</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/firebase-project-billing-plans.webp"
+			alt="Firebase console: billing plans"
+			height="620"
+			width="622"
+		/>
+		<p>
+			Select an existing billing account or 'Create a new billing account'
+			if not already available.
+		</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/firebase-project-billing-account-details.webp"
+			alt="Firebase console: billing account details"
+			height="505"
+			width="521"
+		/>
+		<p>Set a billing budget and 'Continue'.</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/firebase-project-billing-budget.webp"
+			alt="Firebase console: billing budget"
+			height="524"
+			width="522"
+		/>
+		<p>Select 'Purchase' to complete the billing account setup.</p>
+		<img
+			ngSrc="./assets/documentation/documentation-firebase-project-setup/firebase-project-billing-finish.webp"
+			alt="Firebase console: billing finish"
+			height="511"
+			width="521"
+		/>
+		<p>
+			The Blaze plan includes generous quotas that will allow you to
+			develop and scale the application before hitting payment
+			requirements.
+		</p>
+		<p>
+			Blaze plan details, quotas, and limits:
+			<a
+				href="https://firebase.google.com/docs/projects/billing/firebase-pricing-plans#included-with-blaze"
+				target="_blank"
+				>https://firebase.google.com/docs/projects/billing/firebase-pricing-plans#included-with-blaze</a
+			>
+		</p>
+		<p>The Blaze plan includes the following access to services:</p>
+		<ul>
+			<li>
+				Full usage of the no-cost Firebase products and features (like
+				social sign-in methods, Firebase Cloud Messaging, and
+				Crashlytics)
+			</li>
+			<li>
+				No-cost usage quotas for paid Firebase products (like Cloud
+				Firestore, Cloud Storage, and Hosting)
+			</li>
+			<li>
+				Pay-as-you-go pricing for any additional usage of paid Firebase
+				products
+			</li>
+			<li>
+				No-cost usage quota for Cloud Functions for Firebase, then
+				pay-as-you-go pricing
+			</li>
+			<li>
+				Access to paid Google Cloud products and features (like Pub/Sub,
+				Cloud Run, or BigQuery streaming for Analytics)
+			</li>
+		</ul>
+		<p>
+			If your project stays within the Blaze plan's no-cost usage quotas
+			for paid products, then you won't see any billing for those products
+			(with the
+			<a
+				href="https://firebase.google.com/support/faq#storage-charge"
+				target="_blank"
+				>exception of Cloud Functions</a
+			>). But if you do happen to exceed the no-cost usage quota, you only
+			pay for the resources that you consume — this is why the Blaze plan
+			is often called the "pay-as-you-go" plan.
+		</p>
+	</div>
+</div>

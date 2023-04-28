@@ -1,0 +1,289 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">User Account Feature Example</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/workflows/development-workflow/feature-workflow/user-account-feature-example"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			The following is a walkthrough of creating the Account feature. The
+			User Account feature will be a view that displays user account
+			information to the authenticated user.
+		</p>
+		<ul>
+			<li>Generate Account feature library</li>
+			<li>Create Account component</li>
+			<li>Update Account route</li>
+			<li>Update application routing</li>
+			<li>Create Account service</li>
+			<li>Implement NgRx state management</li>
+			<li>Update actions</li>
+			<li>Update reducer</li>
+			<li>Update selectors</li>
+			<li>Update facade</li>
+			<li>Update effects</li>
+			<li>Update Account module</li>
+			<li>Create account loaded resolver function</li>
+			<li>Update Account component to retrieve account information</li>
+			<li>Update Account template to display account information</li>
+		</ul>
+		<h2>Generate Account feature library</h2>
+		<p>
+			Run the below command to generate the
+			<span class="color-purple">Account</span> feature library:
+		</p>
+		<pre><code [highlight]="generateFeatureLibrary"></code></pre>
+		<h2>Create Account component</h2>
+		<p>
+			Run the below command to generate the
+			<span class="color-purple">Account</span> component:
+		</p>
+		<pre><code [highlight]="generateFeatureComponent"></code></pre>
+		<h2>Update Account route</h2>
+		<p>
+			<b>Rename</b> the routes file
+			<span class="color-purple"
+				>libs\features\account\src\lib\lib.routes.ts</span
+			>
+		</p>
+		<ul>
+			<li>
+				<b>From</b> <span class="color-purple"> lib.routes.ts</span>
+			</li>
+			<li>
+				<b>To</b>
+				<span class="color-purple"> account-routing.module.ts</span>
+			</li>
+		</ul>
+		<p>
+			the <span class="color-purple">account-routing.module.ts</span> to
+			be:
+		</p>
+		<pre><code [highlight]="accountRoutingModuleCode"></code></pre>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\account.module.ts</span
+			>
+			by removing all routing references and importing the new
+			<span class="color-putple">AccountRoutingModule</span>
+		</p>
+		<pre><code [highlight]="accountModuleCodeRouting"></code></pre>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\index.ts</span
+			>
+			and remove the routing export
+		</p>
+		<h2>Update application routing</h2>
+		<p>
+			<b>Update</b> the application routing file
+			<span class="color-purple"
+				>apps\full-stack-typescript\src\app\app.routes.ts</span
+			>
+			to include:
+		</p>
+		<pre><code [highlight]="appCodeRouting"></code></pre>
+		<p>
+			<b>Update</b> the application navigation:
+			<span class="color-purple"
+				>apps\full-stack-typescript\src\app\app.component.html</span
+			>
+		</p>
+		<pre><code [highlight]="appNavigationCode"></code></pre>
+		<p>
+			The <span class="color-purple">/account</span> view should now be
+			accessible.
+		</p>
+		<h2>Create Account service</h2>
+		<p>Run the below command to create the Account service library:</p>
+		<pre><code [highlight]="generateAccountServiceLibrary"></code></pre>
+		<p>
+			<b>Delete</b> the
+			<span class="color-purple">services-account.module.ts</span>s file.
+		</p>
+		<p>
+			<b>Update</b> the <span class="color-purple">index.ts</span> file to
+			export the account service file.
+		</p>
+		<h2>Implement NgRx state management</h2>
+		<p>Run the below command to create the NgRx boilerplate.</p>
+		<pre><code [highlight]="initAccountState"></code></pre>
+		<p>
+			Default NgRx schematics implements the
+			<span class="color-purple">entity</span> pattern. This feature only
+			loads a single user account and can use a simplified approach.
+		</p>
+		<p>
+			<b>Delete</b> the
+			<span class="color-purple">account.models.ts</span> file.
+		</p>
+		<h3>Update actions</h3>
+		<p>
+			<b>Update</b> the
+			<span class="color-purple"
+				>libs\features\account\src\lib+state\account.actions.ts</span
+			>
+			file to be:
+		</p>
+		<pre><code [highlight]="accountActionsCode"></code></pre>
+		<h3>Update reducer</h3>
+		<p>
+			<b>Create</b> the
+			<span class="color-purple">AccountState</span> interface at
+			<span class="color-purple"
+				>libs\models\src\lib\account\account-state.interface.ts</span
+			>
+		</p>
+		<pre><code [highlight]="accountStateInterfaceCode"></code></pre>
+		<p>
+			<b>Create</b> the <span class="color-purple">index.ts</span> barrel
+			file at
+			<span class="color-purple"
+				>libs\models\src\lib\account\index.ts</span
+			>
+		</p>
+		<p>
+			<b>Update</b> the barrel file to export the
+			<span class="color-purple">account-state.interface.ts</span> file
+		</p>
+		<p>
+			<b>Update</b> the models barrel file at
+			<span class="color-purple">libs\models\src\index.ts</span> to export
+			the account folder
+		</p>
+		<p>
+			<b>Update</b> the
+			<span class="color-purple"
+				>libs\features\account\src\lib+state\account.reducer.ts</span
+			>
+			file to be:
+		</p>
+		<pre><code [highlight]="accountReducerCode"></code></pre>
+		<h3>Update selectors</h3>
+		<p>
+			<b>Create</b> the
+			<span class="color-purple">ACCOUNT_FEATURE_KEY</span> constant at
+			<span class="color-purple"
+				>libs\constants\src\lib\account\account-feature-key.constant.ts</span
+			>
+		</p>
+		<pre><code [highlight]="accountConstantCode"></code></pre>
+		<p>
+			<b>Update</b> the barrel file to export the
+			<span class="color-purple">account-feature-key.constant.ts</span>
+			file
+		</p>
+		<p>
+			<b>Update</b> the constants barrel file at
+			<span class="color-purple">libs\constants\src\index.ts</span> to
+			export the account folder
+		</p>
+		<p>
+			<b>Update</b> the
+			<span class="color-purple"
+				>libs\features\account\src\lib+state\account.selectors.ts</span
+			>
+			file to be:
+		</p>
+		<pre><code [highlight]="accountSelectorsCode"></code></pre>
+		<h3>Update facade</h3>
+		<p>
+			<b>Create</b> the
+			<span class="color-purple">UserPartialState</span> interface at
+			<span class="color-purple"
+				>libs\models\src\lib\account\account-partial-state.interface.ts</span
+			>
+		</p>
+		<p>
+			<b>Update</b> <span class="color-purple"> index.ts</span> barrel
+			file as required.
+		</p>
+		<p>
+			<b>Update</b> the
+			<span class="color-purple"
+				>libs\features\account\src\lib+state\account.facade.ts</span
+			>
+			file to be:
+		</p>
+		<pre><code [highlight]="accountFacadeCode"></code></pre>
+		<h3>Update effects</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib+state\account.effects.ts</span
+			>
+			to be:
+		</p>
+		<pre><code [highlight]="accountEffectsCode"></code></pre>
+		<h3>Update Account module</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\account.module.ts</span
+			>
+			for update import paths and dependencies.
+		</p>
+		<pre><code [highlight]="accountModuleCodeState"></code></pre>
+		<h2>Create account loaded resolver function</h2>
+		<p>
+			<b>Generate</b> an account library in the resolvers directory by
+			running the below command:
+		</p>
+		<pre><code [highlight]="generateResolverLibraryCode"></code></pre>
+		<p>
+			<b>Delete</b> the
+			<span class="color-purple">resolvers-account.module.ts</span> file.
+		</p>
+		<p>
+			<b>Generate</b> an account loaded resolver function in the resolvers
+			directory by running the below command:
+		</p>
+		<pre><code [highlight]="generateResolverFunctionCode"></code></pre>
+		<p>
+			<b>Update</b> the
+			<span class="color-purple">account-loaded.resolver.ts</span> file to
+			be:
+		</p>
+		<pre><code [highlight]="accountLoadedResolverCode"></code></pre>
+		<p>
+			<b>Update</b> the <span class="color-purple">index.ts</span> barrel
+			file to export the resolver function.
+		</p>
+		<p><b>Update</b> the application routes to include the new guard:</p>
+		<p>
+			App routes:
+			<span class="color-purple">
+				apps\full-stack-typescript\src\app\app.routes.ts</span
+			>
+		</p>
+		<pre><code [highlight]="appRouteResolverCode"></code></pre>
+		<h2>Update Account component to retrieve account information</h2>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\account.component.ts</span
+			>
+			to be:
+		</p>
+		<pre><code [highlight]="accountComponentCode"></code></pre>
+		<h2>Update Account template to display account information</h2>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\account.component.html</span
+			>
+			to be:
+		</p>
+		<pre><code [highlight]="accountTemplateCode"></code></pre>
+		<p>
+			<b>Serve</b> the application <b>login</b> and <b>navigate</b> to the
+			<span class="color-purple">/account</span> view to load and display
+			your account details.
+		</p>
+	</div>
+</div>

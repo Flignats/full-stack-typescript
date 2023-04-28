@@ -1,0 +1,137 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Request for Changes</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/change-requests/request-for-changes"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			Guide to proposing a new or a change to an existing pattern in the
+			codebase or development workflows.
+		</p>
+		<ul>
+			<li>Why should we use this process?</li>
+			<li>Process goals</li>
+			<li>RFC process</li>
+			<li>Reasons for reference implementation</li>
+		</ul>
+		<h2>Why should we use this process?</h2>
+		<p>
+			Engineering teams, especially at scale, require guidelines and
+			patterns to be effective, transparent and enable adoption.
+		</p>
+		<h2>Process goals</h2>
+		<p>This guide aims to achieve the following:</p>
+		<ul>
+			<li>
+				Provide a Single Source of Truth (SSOT) to track all process
+				changes, so that it's easy for stakeholders to understand
+				decisions
+			</li>
+			<li>
+				Create a straightforward format for the team to make, discuss
+				and implement decisions regarding process changes
+			</li>
+			<li>
+				Ensure that there is a DRI (Directly Responsible Individual) so
+				that proposals don't go stale
+			</li>
+		</ul>
+		<h2>RFC process</h2>
+		<ol>
+			<li>
+				Create an issue using the provided templates and include a
+				reference implementation
+				<ul>
+					<li>
+						Requests not using a template can be automatically
+						rejected
+					</li>
+				</ul>
+			</li>
+			<li>
+				Share the RFC issue across shared mediums
+				<ul>
+					<li>Relevant engineering meeting</li>
+					<li>Engineering channel (slack, teams, ect)</li>
+					<li>
+						Connect with relevant stakeholders (i.e. team leads)
+					</li>
+				</ul>
+			</li>
+			<li>
+				Give the stakeholders time to review the proposal and provide
+				comments about the proposal
+			</li>
+			<li>
+				If there is a strong consensus towards a decision
+				<ul>
+					<li>
+						Connect with Engineering Manager to groom and include
+						the issue in a relevant timeline
+					</li>
+					<li>
+						Implement the process change using
+						<a
+							href="https://flignats.gitbook.io/full-stack-typescript/workflows/development-workflow"
+							target="_blank"
+							>GitFlow</a
+						>
+					</li>
+					<li>Announce process change across appropriate mediums</li>
+				</ul>
+			</li>
+			<li>
+				If the decision is not to proceed, the issue should updated with
+				the reasons for disagreement and closed
+			</li>
+		</ol>
+		<h2>Reasons for reference implementation</h2>
+		<p>
+			When an RFC introduces a new pattern the RFC describes high-level
+			design decisions about how developers should implement the pattern
+			in the codebase.
+		</p>
+		<p>
+			In practice, implementing these patterns can uncover technical
+			constraints and low-level design decisions that can profoundly
+			change the high-level guidelines in the RFC.
+		</p>
+		<p>
+			Slightly different understandings of the proposed changes can be
+			more easily understood when the stakeholders look concrete examples.
+		</p>
+		<p>
+			A reference implementation should satisfy the following conditions:
+		</p>
+		<ul>
+			<li>
+				Provide an example in a real-world situation by using the
+				pattern suggested in the RFC to implement a reference solution
+				for an existing feature.
+			</li>
+			<li>
+				Provide metrics that demonstrate performance or productivity
+				improvements.
+			</li>
+		</ul>
+		<p>
+			As the RFC progresses, it is recommended that the reference
+			implementation also progresses with it. Ideally, upon acceptance of
+			an RFC, the reference implementation should be capable of being
+			merged as the initial step towards implementing the RFC in its
+			entirety.
+		</p>
+		<p>
+			There are situations where creating a reference implementation may
+			not be appropriate because the proposal does not involve altering
+			code practices or patterns. In such cases, it is advisable to
+			substitute the reference implementation with an alternative
+			exploration of the specifics, such as a cost-benefit analysis,
+			sample documentation, ect.
+		</p>
+	</div>
+</div>

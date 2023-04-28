@@ -1,0 +1,35 @@
+<mat-toolbar class="toolbar" color="primary" [ngClass]="currentView">
+	<full-stack-typescript-icons
+		(clicked)="onToggleSidenav()"
+		[isClickable]="true"
+		[name]="'menuHamburger'"
+	></full-stack-typescript-icons>
+	<span class="toolbar-link toolbar-link--logo" (click)="onNavigate('about')"
+		>Full Stack Typescript</span
+	>
+	<span class="toolbar-spacer"></span>
+	<span class="toolbar-link" [matMenuTriggerFor]="authMenu"
+		>Authentication</span
+	>
+	<mat-menu #authMenu="matMenu">
+		<button mat-menu-item (click)="onNavigate('login')">Login</button>
+		<button mat-menu-item (click)="onNavigate('sign-up')">Sign Up</button>
+		<mat-divider></mat-divider>
+		<mat-divider></mat-divider>
+		<button mat-menu-item (click)="onNavigate('forgot-password')">
+			Forgot Password
+		</button>
+		<button mat-menu-item (click)="onNavigate('verify-email')">
+			Verify Email
+		</button>
+		<mat-divider></mat-divider>
+		<mat-divider></mat-divider>
+		<button mat-menu-item (click)="onNavigate('account')">Account</button>
+	</mat-menu>
+	<span class="toolbar-link" (click)="onNavigate('icon-examples')"
+		>Icons</span
+	>
+	<span class="toolbar-link" (click)="onNavigate('web3')">Web3</span>
+	<span class="toolbar-link">Github</span>
+	<span class="toolbar-link" (click)="onNavigate('documentation')">Docs</span>
+</mat-toolbar>

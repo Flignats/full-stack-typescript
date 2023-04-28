@@ -1,0 +1,50 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Feature Workflow</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/workflows/development-workflow/feature-workflow"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			A feature delivers a cohesive set of functionality focused on a
+			specific application need such as a user workflow, routing, or
+			forms.
+		</p>
+		<p>Feature library location:</p>
+		<pre><code [highlight]="libraryLocation"></code></pre>
+		<ul>
+			<li>
+				<b>Do</b> generate a feature library if the set of functionality
+				represents a view or route
+			</li>
+			<li>
+				<b>Do</b> generate a feature library if functionality includes
+				state management
+			</li>
+		</ul>
+		<h2>Feature library generator options</h2>
+		<p>Run the below command to view all library options:</p>
+		<pre><code [highlight]="libraryOptionsCommand"></code></pre>
+		<p>
+			Library options reference:
+			<a
+				href="https://nx.dev/packages/angular/generators/library"
+				target="_blank"
+				>https://nx.dev/packages/angular/generators/library</a
+			>
+		</p>
+		<h2>Generate a feature library</h2>
+		<p>Run the below command to generate a feature library:</p>
+		<pre><code [highlight]="libraryGenerateCommand"></code></pre>
+		<ul>
+			<li>
+				<b>Consider</b> naming the feature the same as the route it
+				represents, if applicable
+			</li>
+			<li><b>Do</b> use the --standalone flag whenever possible</li>
+		</ul>
+	</div>
+</div>

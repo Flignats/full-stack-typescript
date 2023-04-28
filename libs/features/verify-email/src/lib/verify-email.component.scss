@@ -1,0 +1,35 @@
+:host {
+	display: block;
+	width: 100%;
+	padding-top: 3em;
+	font-size: 1.5em;
+	line-height: 1.25em;
+}
+
+h1 {
+	margin-bottom: 1em;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
+}
+
+.view-verify-email {
+	padding: 64px 1em 1em 1em;
+	color: white;
+
+	&.large,
+	&.xLarge {
+		padding-top: 128px;
+
+		h1 {
+			font-size: 4em;
+		}
+	}
+}
+
+.verify-actions {
+	width: 90%;
+	margin: 0 auto;
+	padding: 2em;
+	background: rgba(1, 1, 1, 0.5);
+}

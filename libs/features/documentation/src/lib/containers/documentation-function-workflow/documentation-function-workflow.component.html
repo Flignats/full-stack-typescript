@@ -1,0 +1,64 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Function Workflow</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/workflows/development-workflow/function-workflow"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			A function runs backend code in response to events triggered by
+			Firebase features and HTTPS requests.
+		</p>
+		<p>
+			Functions gives developers access to a complete range of fully
+			managed Google Cloud Platform (GCP) services including analytics,
+			authentication and Firebase/Firestore. Cloud Functions round out the
+			GCP offering by providing a way to extend and connect the behavior
+			of Firebase features through the addition of server-side code.
+		</p>
+		<p>
+			Firebase developers can easily integrate with external services for
+			tasks like processing payments and sending SMS messages. Also,
+			developers can include custom logic that is either too heavyweight
+			for clients (mobile/web/desktop), or which needs to be secured on a
+			server.
+		</p>
+		<p>Function location:</p>
+		<pre><code [highlight]="functionLocation"></code></pre>
+		<ul>
+			<li>
+				<b>Do</b> create a function when needing to securely interact
+				with Firebase/Firestore
+			</li>
+			<li>
+				<b>Do</b> create a function when needing to access GCP services
+			</li>
+			<li>
+				<b>Do</b> create a function when a process needs to easily scale
+				in resources
+			</li>
+			<li>
+				<b>Do</b> create a function when a process is too heavy for the
+				client to handle
+			</li>
+			<li>
+				<b>Do</b> create a function when a process includes business
+				logic
+			</li>
+			<li>
+				<b>Do</b> create a function when integrating with 3rd party
+				services and APIs
+			</li>
+			<li><b>Do</b> create a function when using secrets and keys</li>
+			<li>
+				<b>Do</b> create a function to perform database sanitization and
+				maintenance
+			</li>
+		</ul>
+		<h3>GCP Functions dashboard</h3>
+		<pre><code [highlight]="functionDashboardLocation"></code></pre>
+	</div>
+</div>

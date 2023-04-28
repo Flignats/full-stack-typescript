@@ -1,0 +1,194 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Update User Account Callable Function Example</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/workflows/development-workflow/function-workflow/update-user-account-callable-function-example"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			The following is a walkthrough of creating the Update User Account
+			function example
+		</p>
+		<ul>
+			<li>Type of function</li>
+			<li>Create onUpdateAccount function</li>
+			<li>Build the functions</li>
+			<li>Deploy functions</li>
+			<li>Update the frontend application for new API interaction</li>
+			<li>Update Account state management</li>
+			<li>Update actions</li>
+			<li>Update reducer</li>
+			<li>Update facade</li>
+			<li>Update effects</li>
+			<li>Update AccountService</li>
+			<li>Update AccountModule for forms integration</li>
+			<li>Update AccountComponent class</li>
+			<li>Update AccountComponent template</li>
+			<li>Further improvements</li>
+		</ul>
+		<h2>Type of function</h2>
+		<p>
+			For this update, we will be creating an
+			<a
+				href="https://firebase.google.com/docs/functions/callable"
+				target="_blank"
+				>HTTPS callable function</a
+			>
+			that allows users to update their account information directly from
+			the application.
+		</p>
+		<p>
+			Additional types of functions can be reviewed here:
+			<a href="https://firebase.google.com/docs/functions" target="_blank"
+				>Cloud Functions</a
+			>
+		</p>
+		<h2>Create onUpdateAccount function</h2>
+		<p>
+			In the
+			<span class="color-purple"
+				>apps\full-stack-typescript-api\src\functions</span
+			>
+			folder, create the following:
+		</p>
+		<pre><code [highlight]="functionLocation"></code></pre>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				apps\full-stack-typescript-api\src\functions\account\index.ts</span
+			>
+			to be:
+		</p>
+		<pre><code [highlight]="functionCode"></code></pre>
+		<p>
+			The new function receives a
+			<span class="color-purple">data</span> payload of type
+			<span class="color-purple">User</span> and merges the new data to
+			the users document in our database.
+		</p>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				apps\full-stack-typescript-api\src\main.ts</span
+			>
+			to include the new function.
+		</p>
+		<p>
+			The <span class="color-purple">main.ts</span> file is our primary
+			entry point for our functions and needs to be updated so that our
+			new function is included when the project is built.
+		</p>
+		<h2>Build the functions</h2>
+		<p>
+			<b>Run</b> the following command to build the functions application:
+		</p>
+		<pre><code [highlight]="functionBuildCommand"></code></pre>
+		<h2>Deploy functions</h2>
+		<p>
+			<b>Run</b> the following command to deploy new and updated
+			functions:
+		</p>
+		<pre><code [highlight]="functionDeployCommand"></code></pre>
+		<h2>Update the frontend application for new API interaction</h2>
+		<p>
+			Now that we've created a secure method for interacting with the
+			database, we need to update the frontend application to integrate
+			with the new function.
+		</p>
+		<h3>Update Account state management</h3>
+		<h4>Update actions</h4>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\+state\account.actions.ts</span
+			>
+			to include the new actions:
+		</p>
+		<ul>
+			<li><span class="color-purple">updateAccount</span></li>
+			<li><span class="color-purple">updateAccountFailure</span></li>
+			<li><span class="color-purple">updateAccountSuccess</span></li>
+		</ul>
+		<pre><code [highlight]="actionsCode"></code></pre>
+		<h4>Update reducer</h4>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\+state\account.reducer.ts</span
+			>
+			to include:
+		</p>
+		<pre><code [highlight]="reducerCode"></code></pre>
+		<h4>Update facade</h4>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\+state\account.facade.ts</span
+			>
+			to include:
+		</p>
+		<pre><code [highlight]="facadeCode"></code></pre>
+		<h4>Update effects</h4>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\+state\account.effects.ts</span
+			>
+			to include:
+		</p>
+		<pre><code [highlight]="effectsCode"></code></pre>
+		<h3>Update AccountService</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\services\account\src\lib\account.service.ts</span
+			>
+			to include:
+		</p>
+		<pre><code [highlight]="accountServiceCode"></code></pre>
+		<h3>Update AccountModule for forms integration</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\account.module.ts</span
+			>
+			to include the FormsModule:
+		</p>
+		<pre><code [highlight]="accountModuleCode"></code></pre>
+		<h3>Update AccountComponent class</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\account.component.ts</span
+			>
+			to include:
+		</p>
+		<pre><code [highlight]="accountComponentCode"></code></pre>
+		<h3>Update AccountComponent template</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\features\account\src\lib\account.component.html</span
+			>
+			to include:
+		</p>
+		<pre><code [highlight]="accountTemplateCode"></code></pre>
+		<h2>Further improvements</h2>
+		<p>
+			There is now a secure way for users to update their account
+			information with the database. The
+			<span class="color-purple">onUpdateAccount</span> function and
+			<span class="color-purple">Account</span> state accepts a
+			<span class="color-purple">User</span> payload which can include all
+			of the attributes of <span class="color-purple">User</span>.
+		</p>
+		<p>
+			The <span class="color-purple">AccountComponent</span> can be
+			improved to enable updating of all
+			<span class="color-purple">User</span> properties.
+		</p>
+	</div>
+</div>

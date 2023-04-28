@@ -1,0 +1,52 @@
+:host {
+	display: block;
+	width: 100%;
+	padding-top: 3em;
+	font-size: 1.5em;
+	line-height: 1.25em;
+}
+
+::ng-deep {
+	.view-login {
+		mat-form-field {
+			display: block;
+
+			&.mat-mdc-form-field {
+				width: 100%;
+			}
+
+			.mdc-text-field {
+				border-radius: 0;
+				border-top-right-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
+	}
+}
+
+form {
+	width: 90%;
+	margin: 0 auto;
+	padding: 2em;
+	background: rgba(1, 1, 1, 0.5);
+
+	p {
+		color: white;
+	}
+}
+
+h1 {
+	margin-bottom: 1em;
+	font-weight: bold;
+	font-size: 4em;
+	text-align: center;
+}
+
+.view-login {
+	padding: 64px 1em 1em 1em;
+
+	&.large,
+	&.xLarge {
+		padding-top: 128px;
+	}
+}

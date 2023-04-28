@@ -1,0 +1,71 @@
+{
+	"name": "full-stack-typescript-api",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "apps/full-stack-typescript-api/src",
+	"projectType": "application",
+	"targets": {
+		"build-node": {
+			"executor": "@nrwl/webpack:webpack",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"target": "node",
+				"compiler": "tsc",
+				"outputPath": "dist/apps/full-stack-typescript-api",
+				"main": "apps/full-stack-typescript-api/src/main.ts",
+				"tsConfig": "apps/full-stack-typescript-api/tsconfig.app.json",
+				"assets": [
+					"apps/full-stack-typescript-api/src/assets",
+					"apps/full-stack-typescript-api/src/package.json"
+				],
+				"isolatedConfig": true,
+				"webpackConfig": "apps/full-stack-typescript-api/webpack.config.js"
+			},
+			"configurations": {
+				"production": {
+					"optimization": true,
+					"extractLicenses": true,
+					"inspect": false
+				}
+			}
+		},
+		"build": {
+			"executor": "@nrwl/workspace:run-commands",
+			"options": {
+				"command": "nx run full-stack-typescript-api:build-node"
+			}
+		},
+		"serve": {
+			"executor": "@nrwl/js:node",
+			"options": {
+				"buildTarget": "full-stack-typescript-api:build"
+			},
+			"configurations": {
+				"production": {
+					"buildTarget": "full-stack-typescript-api:build:production"
+				}
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["apps/full-stack-typescript-api/**/*.ts"]
+			}
+		},
+		"test": {
+			"executor": "@nrwl/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "apps/full-stack-typescript-api/jest.config.ts",
+				"passWithNoTests": true
+			},
+			"configurations": {
+				"ci": {
+					"ci": true,
+					"codeCoverage": true
+				}
+			}
+		}
+	},
+	"tags": []
+}

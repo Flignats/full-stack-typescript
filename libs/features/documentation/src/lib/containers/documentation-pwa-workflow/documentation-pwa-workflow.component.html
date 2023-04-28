@@ -1,0 +1,108 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">PWA Workflow</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/workflows/pwa-workflow"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			Initialize the Service Worker and progressive web app capabilities.
+		</p>
+		<h2>Add the service worker package</h2>
+		<p>
+			In your app's package.json add the latest Angular service worker
+			package:
+		</p>
+		<pre><code [highlight]="serviceWorkerPackage"></code></pre>
+		<p>
+			Run <span class="color-purple">npm i</span> to install the package.
+		</p>
+		<h2>Update the application Index</h2>
+		<p>Index location:</p>
+		<pre><code [highlight]="appIndexLocation"></code></pre>
+		<p>
+			<b>Add</b> the following directly before the
+			<span class="color-purple">head</span> closing tag
+		</p>
+		<pre><code [highlight]="indexManifest"></code></pre>
+		<h2>Add the web manifest file</h2>
+		<p>
+			<b>Create</b> a
+			<span class="color-purple">manifest.webmanifest</span> file at the
+			following location:
+		</p>
+		<pre><code [highlight]="webManifestLocation"></code></pre>
+		<p><b>Add</b> the following code:</p>
+		<pre><code [highlight]="webManifestCode"></code></pre>
+		<h2><b>Add</b> the web ngsw-config file</h2>
+		<p>
+			<b>Create</b> a
+			<span class="color-purple">ngsw-config.json</span> file at the
+			following location:
+		</p>
+		<pre><code [highlight]="ngswLocation"></code></pre>
+		<p><b>Add</b> the following code:</p>
+		<pre><code [highlight]="ngswCode"></code></pre>
+		<h2>Update the application project.json</h2>
+		<ul>
+			<li>
+				<b>Add</b> the
+				<span class="color-purple">manifest.webmanifest</span> to the
+				project assets
+			</li>
+			<li>
+				<b>Add</b> the
+				<span class="color-purple">"serviceWorker": true</span>, to the
+				project options
+			</li>
+			<li>
+				<b>Add</b> the
+				<span class="color-purple"
+					>"ngswConfigPath":
+					"apps/**project**/src/ngsw-config.json"</span
+				>
+				to the project options
+			</li>
+		</ul>
+		<pre><code [highlight]="projectJsonCode"></code></pre>
+		<h2>Update the application module</h2>
+		<p>
+			<b>Update</b> the <span class="color-purple">app.module</span> file
+			to include the following:
+		</p>
+		<pre><code [highlight]="appModuleCode"></code></pre>
+		<h2>Add required icon assets</h2>
+		<p><b>Add</b> the required icon assets to the following location:</p>
+		<pre><code [highlight]="appIconLocation"></code></pre>
+		<p>Required icons:</p>
+		<ul>
+			<li>icon-72x72.png</li>
+			<li>icon-96x96.png</li>
+			<li>icon-128x128.png</li>
+			<li>icon-144x144.png</li>
+			<li>icon-152x152.png</li>
+			<li>icon-192x192.png</li>
+			<li>icon-384x384.png</li>
+			<li>icon-512x512.png</li>
+		</ul>
+		<h2>Angular service worker documenation</h2>
+		<p>
+			Officical Angular documentation:
+			<a
+				href="https://angular.io/guide/service-worker-intro"
+				target="_blank"
+				>https://angular.io/guide/service-worker-intro</a
+			>
+		</p>
+		<p>
+			The steps in this guide are provided for easy service worker
+			implementation in a NX monorepo architecture. The Angular guide does
+			not document the required considerations and as a result cannot be
+			added automatically with the
+			<span class="color-purple">ng add</span> command.
+		</p>
+	</div>
+</div>

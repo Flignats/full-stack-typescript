@@ -1,0 +1,146 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Query Ethereum Function Example</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://app.gitbook.com/o/XcKlRmd50GB0ItxmDCMG/s/NVYJrd7kSXjRrTkPDUK6/workflows/development-workflow/web3-function-workflow/query-ethereum-balance-callable-function-example"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			The following is a walkthrough of querying the Ethereum blockchain
+			for an address' Ethereum balance example.
+		</p>
+		<ul>
+			<li>Install dependencies</li>
+			<li>Create onGetBalance function</li>
+			<li>Build the functions</li>
+			<li>Deploy functions</li>
+			<li>Update the frontend application for new API interaction</li>
+			<li>Generate a Moralis service library</li>
+			<li>Create Moralis service</li>
+			<li>Update MoralisService</li>
+			<li>Create Web3 view</li>
+			<li>Update web3.component.ts</li>
+			<li>Update web3.component.html</li>
+			<li>Further improvements</li>
+		</ul>
+		<h2>Install dependencies</h2>
+		<p><b>Run</b> the following to install dependencies:</p>
+		<pre><code [highlight]="installMoralisCommand"></code></pre>
+		<pre><code [highlight]="installMoralisCommonCommand"></code></pre>
+		<p>
+			<b>Update</b> function
+			<span class="color-purple">package.json</span> to include
+			dependencies:
+		</p>
+		<p>
+			File:
+			<span class="color-purple"
+				>file: apps\full-stack-typescript-api\src\package.json</span
+			>
+		</p>
+		<pre><code [highlight]="packageJsonCode"></code></pre>
+		<h2>Create onGetBalance function</h2>
+		<p>
+			In the
+			<span class="color-purple"
+				>apps\full-stack-typescript-api\src\functions</span
+			>
+			folder, create the following:
+		</p>
+		<pre><code [highlight]="functionFiles"></code></pre>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				apps\full-stack-typescript-api\src\functions\moralis\index.ts</span
+			>
+			to be:
+		</p>
+		<pre><code [highlight]="functionCode"></code></pre>
+		<p>
+			The new function receives a
+			<span class="color-purple">data</span> payload of type
+			<span class="color-purple">address</span> and queries the Etheruem
+			blockchain for the address' Ethereum balance.
+		</p>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				apps\full-stack-typescript-api\src\main.ts</span
+			>
+			to include the new function.
+		</p>
+		<pre><code [highlight]="functionMainCode"></code></pre>
+		<p>
+			The <span class="color-purple">main.ts</span> file is our primary
+			entry point for our functions and needs to be updated so that our
+			new function is included when the project is built.
+		</p>
+		<h2>Build the functions</h2>
+		<p>
+			<b>Run</b> the following command to build the functions application:
+		</p>
+		<pre><code [highlight]="functionBuildCommand"></code></pre>
+		<h2>Deploy functions</h2>
+		<p>
+			<b>Run</b> the following command to deploy new and updated
+			functions:
+		</p>
+		<pre><code [highlight]="functionDeployCommand"></code></pre>
+		<h2>Update the frontend application for new API interaction</h2>
+		<p>
+			Now that we've created a cloud function for interacting with the
+			Ethereum blockchain, we need to update the frontend application to
+			integrate with the new function.
+		</p>
+		<h3>Generate a Moralis service library</h3>
+		<p>
+			<b>Run</b> the below command to generate a new Moralis service
+			libary:
+		</p>
+		<pre><code [highlight]="serviceLibraryCommand"></code></pre>
+		<p><b>Run</b> the below command to create the Moralis service:</p>
+		<pre><code [highlight]="serviceCommand"></code></pre>
+		<p>
+			<b>Delete</b> the
+			<span class="color-purple">services-moralis.module.ts</span> file.
+		</p>
+		<p>
+			<b>Update</b> the <span class="color-purple">index.ts</span> file to
+			remove the module export and export the Moralis service.
+		</p>
+		<h3>Update MoralisService</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\services\moralis\src\lib\moralis.service.ts</span
+			>
+			to include:
+		</p>
+		<pre><code [highlight]="serviceCode"></code></pre>
+		<h3>Create Web3 view</h3>
+		<p>
+			Feature workflow should be followed as described here:
+			<a routerLink="/documentation/feature-workflow">Feature workflow</a>
+		</p>
+		<h3>Update web3.component.ts</h3>
+		<pre><code [highlight]="componentCode"></code></pre>
+		<h3>Update web3.component.html</h3>
+		<pre><code [highlight]="componentTemplateCode"></code></pre>
+		<h2>Further improvements</h2>
+		<p>
+			The <span class="color-purple">onGetBalance</span> function
+			currently exposes the Moralis API key and should not be deployed to
+			production environments. To secure this function and keep secrets,
+			secret, the
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/workflows/secret-manager-api-workflow"
+				target="_blank"
+				>Secret Manager API workflow</a
+			>
+			should be followed to improve and secure the function from abuse.
+		</p>
+	</div>
+</div>

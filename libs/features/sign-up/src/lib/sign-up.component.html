@@ -1,0 +1,39 @@
+<div class="view-sign-up" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Sign Up</h1>
+	<form
+		[formGroup]="authForm"
+		(ngSubmit)="onSubmitAuthForm(userEmail.value, userPassword.value)"
+	>
+		<mat-form-field color="accent">
+			<input
+				type="text"
+				matInput
+				#userEmail
+				placeholder="Email"
+				formControlName="email"
+				required
+			/>
+		</mat-form-field>
+		<mat-form-field color="accent">
+			<input
+				type="password"
+				matInput
+				#userPassword
+				placeholder="Password"
+				formControlName="password"
+				required
+			/>
+		</mat-form-field>
+		<p class="auth-button-wrapper">
+			<button
+				type="submit"
+				mat-raised-button
+				color="primary"
+				[disabled]="authForm.invalid"
+			>
+				Submit
+			</button>
+		</p>
+		<p><a routerLink="/login">Login</a> to your account.</p>
+	</form>
+</div>

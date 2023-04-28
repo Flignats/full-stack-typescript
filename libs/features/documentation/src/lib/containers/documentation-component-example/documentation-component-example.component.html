@@ -1,0 +1,119 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Application Toolbar Component Example</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/workflows/development-workflow/component-workflow/application-toolbar-component-example"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			The following is a walkthrough of creating the AppToolbarComponent
+			component
+		</p>
+		<h2>Generate component library</h2>
+		<p>
+			Run the below command to generate the
+			<span class="color-purple">app-toolbar</span> component library:
+		</p>
+		<pre><code [highlight]="generateComponentLibrary"></code></pre>
+		<p>
+			<b>Rename</b> the component files to be
+			<span class="color-purple">app-toolbar.component.ts|html|scss</span>
+		</p>
+		<p>
+			<b>Update</b>
+			<span class="color-purple"> app-toolbar.component.ts</span> to be:
+		</p>
+		<pre><code [highlight]="initComponent"></code></pre>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\components\app-toolbar\src\index.ts</span
+			>
+			to export the app-toolbar component.
+		</p>
+		<p>We are now ready to begin development on the app-toolbar.</p>
+		<h2>Update AppToolbarComponent files</h2>
+		<h3>Update AppToolbarComponent</h3>
+		<p>
+			The <span class="color-purple">AppToolbarComponent</span> will need
+			its imports updated.
+		</p>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\components\app-toolbar\src\lib\app-toolbar.component.ts</span
+			>
+			to be:
+		</p>
+		<pre><code [highlight]="appToolbarComponentCode"></code></pre>
+
+		<h3>Update AppToolbarComponent template</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\components\app-toolbar\src\lib\app-toolbar.component.html</span
+			>
+			to be:
+		</p>
+		<pre><code [highlight]="appToolbarTemplateCode"></code></pre>
+
+		<h3>Update AppToolbarComponent styles</h3>
+		<p>
+			Often, a design is a provided to guide the development of the
+			component styles. However, for this example we will add some simple
+			styles for our toolbar.
+		</p>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				libs\components\app-toolbar\src\lib\app-toolbar.component.scss</span
+			>
+			to be:
+		</p>
+		<pre><code [highlight]="appToolbarScssCode"></code></pre>
+
+		<h2>Update main application</h2>
+		<p>
+			Now that our
+			<span class="color-purple">AppToolbarComponent</span> is ready for
+			use, we can import it in the main application.
+		</p>
+		<h3>Update AppModule</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				apps\full-stack-typescript\src\app\app.module.ts</span
+			>
+			to include the new component.
+		</p>
+		<pre><code [highlight]="appToolbarModuleCode"></code></pre>
+		<h3>Update AppComponent template</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				apps\full-stack-typescript\src\app\app.component.html</span
+			>
+			to include the new toolbar component.
+		</p>
+		<pre><code [highlight]="appComponentCode"></code></pre>
+		<h3>Update AppComponent styles</h3>
+		<p>
+			<b>Update</b>
+			<span class="color-purple">
+				apps\full-stack-typescript\src\app\app.component.scss</span
+			>
+			to include some simple toolbar styles.
+		</p>
+		<pre><code [highlight]="appStylesCode"></code></pre>
+
+		<h2>Conclusion</h2>
+		<p>
+			Our new component should now be available for use. Serve the
+			application and verify everything is working properly.
+		</p>
+		<pre><code [highlight]="appServeCode"></code></pre>
+	</div>
+</div>

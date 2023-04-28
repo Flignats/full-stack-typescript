@@ -1,0 +1,58 @@
+<div class="sidenav__header">
+	<span (click)="onToggleSidenav()">&#11198;</span>
+</div>
+
+<div class="sidenav__navigation">
+	<mat-nav-list>
+		<a
+			class="sidenav__navigation__link"
+			mat-list-item
+			(click)="onNavigate('login')"
+			>Login</a
+		>
+		<a
+			class="sidenav__navigation__link"
+			mat-list-item
+			(click)="onNavigate('sign-up')"
+			>Sign Up</a
+		>
+		<a
+			class="sidenav__navigation__link"
+			mat-list-item
+			(click)="onNavigate('forgot-password')"
+			>Forgot Password</a
+		>
+		<a
+			class="sidenav__navigation__link"
+			mat-list-item
+			(click)="onNavigate('verify-email')"
+			>Verify Email</a
+		>
+		<a
+			class="sidenav__navigation__link"
+			mat-list-item
+			(click)="onNavigate('account')"
+			>Account</a
+		>
+		<mat-divider></mat-divider>
+		<a
+			class="sidenav__navigation__link"
+			mat-list-item
+			(click)="onNavigate('icon-examples')"
+			>Icons</a
+		>
+		<a
+			class="sidenav__navigation__link"
+			mat-list-item
+			(click)="onNavigate('web3')"
+			>Web3</a
+		>
+		<a class="sidenav__navigation__link" mat-list-item>Github</a>
+		<a
+			class="sidenav__navigation__link"
+			mat-list-item
+			(click)="onNavigate('documentation')"
+			>Docs</a
+		>
+	</mat-nav-list>
+</div>

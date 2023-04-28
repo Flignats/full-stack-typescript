@@ -1,0 +1,59 @@
+<div class="view-web3" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Web3</h1>
+	<div class="intro color-grey">
+		<p>
+			Full Stack Typescript provides functional integration with Moralis -
+			everything needed including enterprise-grade APIs and real-time
+			blockchain data that make Web3 development as easy as Web2
+		</p>
+
+		<h2>Demo</h2>
+
+		<ul>
+			<li>
+				Steph Curry's Ethereum balance:
+				<button
+					*ngIf="(isLoadingBalance$ | async) === false"
+					[hidden]="balance$ | async"
+					mat-raised-button
+					color="primary"
+					(click)="
+						onGetBalance(
+							'0x3bEcf83939f34311b6bEe143197872d877501B11'
+						)
+					"
+				>
+					Get balance
+				</button>
+				<mat-spinner
+					*ngIf="isLoadingBalance$ | async"
+					[diameter]="25"
+				></mat-spinner>
+				<span *ngIf="balance$ | async as balance">{{
+					balance.balance
+				}}</span>
+			</li>
+			<li>
+				Steph Curry's Ethereum wallet:
+				<a
+					href="https://etherscan.io/address/0x3bEcf83939f34311b6bEe143197872d877501B11"
+					target="_blank"
+					>0x3bEcf83939f34311b6bEe143197872d877501B11</a
+				>
+			</li>
+		</ul>
+
+		<h2>What we've provided</h2>
+
+		<div class="intro__features">
+			<ul>
+				<li>Live end-to-end examples with the Moralis API</li>
+				<li>Safe, secure client requests with server-side functions</li>
+				<li>
+					Render blockchain information efficiently in the view with
+					easy state management
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

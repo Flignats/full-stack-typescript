@@ -1,0 +1,75 @@
+:host {
+	display: block;
+	width: 100%;
+	padding-top: 3em;
+	font-size: 1.5em;
+	line-height: 1.25em;
+}
+
+h1,
+h2 {
+	font-weight: bold;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 1em;
+	font-size: 3em;
+}
+
+h2 {
+	margin: 2em 0 1em 0;
+	font-size: 2em;
+	line-height: 1.3em;
+}
+
+h3 {
+	margin: 1em 0;
+	font-weight: bold;
+	font-size: 1.5em;
+	line-height: 1.3em;
+}
+
+img {
+	display: block;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	margin: 1.5em auto;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+li {
+	line-height: 1.5em;
+}
+
+.view-documentation {
+	padding: 64px 1em 1em 1em;
+
+	&.large,
+	&.xLarge {
+		padding-top: 128px;
+
+		h1 {
+			font-size: 4em;
+		}
+
+		.intro {
+			width: 50%;
+		}
+	}
+}
+
+.intro {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.reference-gitbook {
+	margin: 0 0 1em 0;
+	text-align: center;
+}

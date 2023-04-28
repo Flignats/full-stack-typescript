@@ -1,0 +1,34 @@
+{
+	"name": "components-app-footer",
+	"$schema": "../node_modules/nx/schemas/project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/components/app-footer/src",
+	"prefix": "full-stack-typescript",
+	"targets": {
+		"test": {
+			"executor": "@nrwl/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/components/app-footer/jest.config.ts",
+				"passWithNoTests": true
+			},
+			"configurations": {
+				"ci": {
+					"ci": true,
+					"codeCoverage": true
+				}
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": [
+					"libs/components/app-footer/**/*.ts",
+					"libs/components/app-footer/**/*.html"
+				]
+			}
+		}
+	},
+	"tags": []
+}

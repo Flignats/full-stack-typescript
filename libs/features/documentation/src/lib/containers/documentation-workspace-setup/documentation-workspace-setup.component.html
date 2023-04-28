@@ -1,0 +1,25 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Workspace Setup</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/environment-setup/workspace-setup"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>Steps for initializing your new full stack application workspace</p>
+		<p>
+			Open VS Code or your preferred command line tool and navigate to the
+			directory you wish to install the new repository.
+		</p>
+		<p>Clone the starter repository.</p>
+		<pre><code [highlight]="cloneRepository"></code></pre>
+		<p>Navigate to the new project's directory.</p>
+		<pre><code [highlight]="navigateToRepository"></code></pre>
+		<p>Install the project dependencies.</p>
+		<pre><code [highlight]="installDependencies"></code></pre>
+
+		<p class="color-red">TO BE CONTINUED...</p>
+	</div>
+</div>

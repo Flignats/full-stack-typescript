@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fullstacktypescript": {
+      "hosting": {
+        "full-stack-typescript": [
+          "fullstacktypescript"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fullstacktypescript"
+  }
+}

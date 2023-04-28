@@ -1,0 +1,58 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Icon Workflow</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/workflows/icon-workflow"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			Implement and consume icons without sacrificing performance or
+			scalability.
+		</p>
+		<h2>Add the new icon</h2>
+		<p>Icons can be added and managed easily within their own files.</p>
+		<p>Icons definition location:</p>
+		<pre><code [highlight]="iconDefinitionLocation"></code></pre>
+		<p>Example icon file:</p>
+		<pre><code [highlight]="exampleIconFile"></code></pre>
+		<p>Update the file with the icon information.</p>
+		<pre><code [highlight]="iconInformation"></code></pre>
+		<p>
+			<b>Note:</b> the property that controls the icon's color must use
+			the value <span class="color-purple">currentColor</span> to enable
+			styling through the icon component.
+		</p>
+		<p>
+			Update the <span class="color-purple">index.ts</span> file to export
+			the new icon.
+		</p>
+		<h2>Register the icon</h2>
+		<p>
+			Icons are registered in the feature module that displays the icon.
+			This enables the best tree-shaking and ensures the highest
+			application performance.
+		</p>
+		<p>In the feature module component, register the icon:</p>
+		<p>
+			<b>Import</b> the <span class="color-purple">IconsModule</span> in
+			the feature module.
+		</p>
+		<p><b>Register</b> the icon for use in the component.</p>
+		<pre><code [highlight]="exampleIconComponent"></code></pre>
+		<h2>Display the icon</h2>
+		<p>
+			Once an icon is registered it can be used and configured in the
+			template.
+		</p>
+		<pre><code [highlight]="exampleIconTemplate"></code></pre>
+		<h2>Source code and list of attributes</h2>
+		<p>
+			Icon customizations and configuration requirements can be viewed
+			from its source code.
+		</p>
+		<pre><code [highlight]="iconSourceCode"></code></pre>
+	</div>
+</div>

@@ -1,0 +1,95 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "es2015",
+		"module": "esnext",
+		"lib": ["es2017", "dom"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@full-stack-typescript/components/app-footer": [
+				"libs/components/app-footer/src/index.ts"
+			],
+			"@full-stack-typescript/components/app-sidenav": [
+				"libs/components/app-sidenav/src/index.ts"
+			],
+			"@full-stack-typescript/components/app-toolbar": [
+				"libs/components/app-toolbar/src/index.ts"
+			],
+			"@full-stack-typescript/constants": ["libs/constants/src/index.ts"],
+			"@full-stack-typescript/features/about": [
+				"libs/features/about/src/index.ts"
+			],
+			"@full-stack-typescript/features/account": [
+				"libs/features/account/src/index.ts"
+			],
+			"@full-stack-typescript/features/auth": [
+				"libs/features/auth/src/index.ts"
+			],
+			"@full-stack-typescript/features/breakpoint": [
+				"libs/features/breakpoint/src/index.ts"
+			],
+			"@full-stack-typescript/features/documentation": [
+				"libs/features/documentation/src/index.ts"
+			],
+			"@full-stack-typescript/features/forgot-password": [
+				"libs/features/forgot-password/src/index.ts"
+			],
+			"@full-stack-typescript/features/icon-examples": [
+				"libs/features/icon-examples/src/index.ts"
+			],
+			"@full-stack-typescript/features/icons": [
+				"libs/features/icons/src/index.ts"
+			],
+			"@full-stack-typescript/features/login": [
+				"libs/features/login/src/index.ts"
+			],
+			"@full-stack-typescript/features/sign-up": [
+				"libs/features/sign-up/src/index.ts"
+			],
+			"@full-stack-typescript/features/verify-email": [
+				"libs/features/verify-email/src/index.ts"
+			],
+			"@full-stack-typescript/features/web3": [
+				"libs/features/web3/src/index.ts"
+			],
+			"@full-stack-typescript/guards/account": [
+				"libs/guards/account/src/index.ts"
+			],
+			"@full-stack-typescript/guards/authentication": [
+				"libs/guards/authentication/src/index.ts"
+			],
+			"@full-stack-typescript/models": ["libs/models/src/index.ts"],
+			"@full-stack-typescript/resolvers/account": [
+				"libs/resolvers/account/src/index.ts"
+			],
+			"@full-stack-typescript/services/account": [
+				"libs/services/account/src/index.ts"
+			],
+			"@full-stack-typescript/services/auth": [
+				"libs/services/auth/src/index.ts"
+			],
+			"@full-stack-typescript/services/firebase-messaging": [
+				"libs/services/firebase-messaging/src/index.ts"
+			],
+			"@full-stack-typescript/services/firestore": [
+				"libs/services/firestore/src/index.ts"
+			],
+			"@full-stack-typescript/services/icon-registry": [
+				"libs/services/icon-registry/src/index.ts"
+			],
+			"@full-stack-typescript/services/moralis": [
+				"libs/services/moralis/src/index.ts"
+			]
+		}
+	},
+	"exclude": ["node_modules", "tmp"]
+}

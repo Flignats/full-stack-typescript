@@ -1,0 +1,52 @@
+<div class="view-account" [ngClass]="currentView$ | async">
+	<h1 class="color-green">User account information</h1>
+
+	<div class="view-account__details">
+		<ng-container *ngIf="account$ | async as account">
+			<ul>
+				<li>
+					<span class="color-green">Created at:</span>
+					<span class="spacer"></span>
+					{{ account.createdAt?.toDate() }}
+				</li>
+				<li>
+					<span class="color-green">Email:</span>
+					<span class="spacer"></span>
+					{{ account.email }}
+				</li>
+				<li>
+					<span class="color-green">Github Url:</span>
+					<span class="spacer"></span>
+					{{ account.githubURL }}
+				</li>
+				<li>
+					<span class="color-green">Phone:</span>
+					<span class="spacer"></span>
+					{{ account.phoneNumber }}
+				</li>
+				<li>
+					<span class="color-green">Uid:</span>
+					<span class="spacer"></span>
+					{{ account.uid }}
+				</li>
+				<li>
+					<span class="color-green">Updated at:</span>
+					<span class="spacer"></span>
+					{{ account.updatedAt?.toDate() }}
+				</li>
+			</ul>
+		</ng-container>
+	</div>
+
+	<div class="view-account__update-github">
+		Update Github URL: <input type="text" [(ngModel)]="githubURL" />
+		<button
+			mat-raised-button
+			color="primary"
+			(click)="onUpdateAccount()"
+			[disabled]="!githubURL"
+		>
+			Update Account
+		</button>
+	</div>
+</div>

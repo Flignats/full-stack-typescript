@@ -1,0 +1,8 @@
+{
+	"order": "smacss",
+	"singleQuote": true,
+	"quoteProps": "preserve",
+	"tabWidth": 4,
+	"trailingComma": "none",
+	"useTabs": true
+}

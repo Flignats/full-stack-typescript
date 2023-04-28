@@ -1,0 +1,105 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// Define a dark theme
+$dark-theme: mat.define-dark-theme(
+	(
+		color: (
+			primary: mat.define-palette(mat.$pink-palette),
+			accent: mat.define-palette(mat.$blue-grey-palette)
+		),
+		// Only include `typography` and `density` in the default dark theme.
+		typography: mat.define-typography-config(),
+		density: 0
+	)
+);
+
+// Define a light theme
+$light-theme: mat.define-light-theme(
+	(
+		color: (
+			primary: mat.define-palette(mat.$indigo-palette),
+			accent: mat.define-palette(mat.$pink-palette)
+		)
+	)
+);
+
+// Apply the dark theme by default
+@include mat.core-theme($dark-theme);
+@include mat.button-theme($dark-theme);
+
+// Apply the light theme only when the user prefers light themes.
+@media (prefers-color-scheme: light) {
+	// Use the `-color` mixins to only apply color styles without reapplying the same
+	// typography and density styles.
+	@include mat.core-color($light-theme);
+	@include mat.button-color($light-theme);
+}
+
+:root {
+	--color-grey: rgb(178 190 205);
+	--color-red: red;
+	--color-tetradic-gold: #b5a33f;
+	--color-tetradic-green: #3fb568;
+	--color-tetradic-purple: #b53f8c;
+}
+
+.color-green {
+	color: var(--color-tetradic-green);
+}
+
+.color-gold {
+	color: var(--color-tetradic-gold);
+}
+
+.color-grey {
+	color: var(--color-grey);
+}
+
+.color-purple {
+	color: var(--color-tetradic-purple);
+}
+
+.color-red {
+	color: var(--color-red);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background: linear-gradient(
+		176deg,
+		rgb(18, 24, 27) 50%,
+		rgb(32, 39, 55) 100%
+	);
+	background-attachment: fixed;
+	color: white;
+	font: 400 16px/20px Roboto, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: white;
+}
+
+a {
+	color: var(--color-tetradic-green);
+}
+
+b {
+	color: var(--color-tetradic-gold);
+}
+
+ul {
+	list-style-type: none;
+}
