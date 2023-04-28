@@ -16,7 +16,7 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: '16.17.0'
-    - run: npm install
+    - run: npm install --legacy-peer-deps
     - run: npm run build:full-stack-typescript
     - uses: w9jds/firebase-action@master
       with:
