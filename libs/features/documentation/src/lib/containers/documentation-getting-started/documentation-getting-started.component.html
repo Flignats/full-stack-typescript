@@ -1,0 +1,187 @@
+<div class="view-documentation" [ngClass]="currentView$ | async">
+	<h1 class="color-green">Getting started Full Stack Typescript</h1>
+	<div class="intro color-grey">
+		<div class="reference-gitbook">
+			<a
+				href="https://flignats.gitbook.io/full-stack-typescript/getting-started-with-the-full-stack-typescript-repository"
+				target="_blank"
+				>Gitbook document</a
+			>
+		</div>
+		<p>
+			The following walkthrough is provided to update the Full Stack
+			Typescript repository for your own projects
+		</p>
+		<ul>
+			<li>Clone the Full Stack Typescript repository</li>
+			<li>Setup workspace and Firebase environments</li>
+			<li>Update Firebase Cli</li>
+			<li>Search and replace project settings</li>
+			<li>Build and deploy your project</li>
+			<li>Deploy your project's functions</li>
+			<li>Update Github workflows</li>
+			<li>Delete unwanted libraries</li>
+		</ul>
+
+		<h2>Clone the Full Stack Typescript repository</h2>
+		<pre><code [highlight]="cloneCommand"></code></pre>
+
+		<h2>Setup workspace and Firebase environments</h2>
+		<p>
+			Follow the environment setup guides to prepare your workspace and
+			Firebase project for use.
+		</p>
+		<ul>
+			<li>
+				<a routerLink="/documentation/environment-setup"
+					>Environment setup</a
+				>
+			</li>
+			<li>
+				<a routerLink="/documentation/workspace-setup"
+					>Workspace setup</a
+				>
+			</li>
+			<li>
+				<a routerLink="/documentation/firebase-project-setup"
+					>Firebase project setup</a
+				>
+			</li>
+			<li>
+				<a routerLink="/documentation/firebase-authentication"
+					>Firebase authentication</a
+				>
+			</li>
+			<li>
+				<a routerLink="/documentation/firestore-database"
+					>Firestore database</a
+				>
+			</li>
+			<li>
+				<a routerLink="/documentation/firebase-hosting"
+					>Firebase hosting</a
+				>
+			</li>
+		</ul>
+
+		<h2>Update Firebase Cli</h2>
+		<p><b>Login</b> to the Firebase Cli, if not already.</p>
+		<p>
+			<b>Run</b>
+			<span class="color-purple"> firebase projects:list</span> to display
+			the available projects
+		</p>
+		<p>
+			<b>Run</b>
+			<span class="color-purple"> firebase use **project id**</span> to
+			set the active project
+		</p>
+
+		<h2>Search and replace project settings</h2>
+		<p>
+			<b>Search</b> for
+			<span class="color-purple"> full-stack-typescript</span> and
+			<b>replace</b> with your project name.
+		</p>
+		<p>
+			<b>Search</b> for
+			<span class="color-purple">fullStackTypescript</span> and
+			<b>replace</b> with your project name in
+			<span class="color-purple">camelCase</span>.
+		</p>
+		<p>
+			<b>Update</b> the directive selector prefix in all
+			<span class="color-purple">eslintrc.json</span> files to be
+			<span class="color-purple">camelCase</span>
+		</p>
+		<p>
+			<b>Update</b> firebase settings in the messaging service worker for
+			your project
+			<span class="color-purple"
+				>apps\**project**\src\firebase-messaging-sw.js</span
+			>
+		</p>
+		<p>
+			<b>Update</b> <span class="color-purple"> .firebaserc</span> to
+			match your project settings:
+		</p>
+		<ul>
+			<li>
+				<b>Update</b> the <span class="color-purple">target</span> and
+				<span class="color-purple">hosting</span> keys to your project's
+				display name
+			</li>
+			<li>
+				<b>Update</b> the
+				<span class="color-purple">hosting</span> value to your project
+				id
+			</li>
+			<li>
+				<b>Update</b> the
+				<span class="color-purple">default</span> value to your project
+				id
+			</li>
+		</ul>
+		<p><b>Update</b> environment files to match your project settings.</p>
+		<ul>
+			<li>
+				<span class="color-purple"
+					>apps\**project**\src\environments\environment.prod.ts</span
+				>
+			</li>
+			<li>
+				<span class="color-purple"
+					>apps\**project**\src\environments\environment.ts</span
+				>
+			</li>
+		</ul>
+		<p><b>Rename</b> project folders to your project name</p>
+		<p>
+			<b>Update</b> the
+			<span class="color-purple">package.json</span> version number to the
+			appropriate version.
+		</p>
+
+		<h2>Build and deploy your project</h2>
+		<p>
+			<b>Run</b>
+			<span class="color-purple"> npm run build:example-project</span> to
+			build the client side application.
+		</p>
+		<p>
+			<b>Run</b>
+			<span class="color-purple"> firebase deploy --only hosting</span> to
+			deploy the application to Firebase hosting.
+		</p>
+
+		<h2>Deploy your project's functions</h2>
+		<p>
+			<b>Run</b>
+			<span class="color-purple"> firebase deploy --only functions</span>
+			to build and deploy the Google Cloud Functions.
+		</p>
+
+		<h2>Update Github workflows</h2>
+		<p>
+			<b>Delete</b> or <b>update</b> the Github workflows files if you
+			will be using Github actions to deploy your project.
+		</p>
+		<ul>
+			<li>
+				<b>Update</b>
+				<span class="color-purple"> firebaseServiceAccount</span> with
+				your project's value
+			</li>
+			<li>
+				<b>Update</b> <span class="color-purple"> projectId</span> with
+				your project id
+			</li>
+		</ul>
+
+		<h2>Delete unwanted libraries</h2>
+		<p>
+			<b>Delete</b> libraries that your project will not be using from
+			<span class="color-purple">libs</span>
+		</p>
+	</div>
+</div>

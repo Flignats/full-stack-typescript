@@ -11,6 +11,7 @@ export * from './documentation-firebase-project-setup/documentation-firebase-pro
 export * from './documentation-firestore-database/documentation-firestore-database.component';
 export * from './documentation-function-example/documentation-function-example.component';
 export * from './documentation-function-workflow/documentation-function-workflow.component';
+export * from './documentation-getting-started/documentation-getting-started.component';
 export * from './documentation-icon-workflow/documentation-icon-workflow.component';
 export * from './documentation-introduction/documentation-introduction.component';
 export * from './documentation-naming-conventions/documentation-naming-conventions.component';
