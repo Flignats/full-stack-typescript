@@ -18,7 +18,7 @@ by [@TheRealFlignats](https://twitter.com/TheRealFlignats)
 ## Getting Started
 
 ```bash
-git clone --- new-project
+git clone https://github.com/Flignats/full-stack-typescript.git new-project
 cd new-project
 npm install --legacy-peer-deps
 npm start
@@ -36,29 +36,29 @@ npm start
 
 To configure this repository for use with your own projects and Firebase account follow the following steps:
 
-[Application guide](https://fullstacktypescript.app/documentation/getting-started)
-[Gitbook reference](https://flignats.gitbook.io/full-stack-typescript/getting-started-with-the-full-stack-typescript-repository)
+- [Application guide](https://fullstacktypescript.app/documentation/getting-started)
+- [Gitbook reference](https://flignats.gitbook.io/full-stack-typescript/getting-started-with-the-full-stack-typescript-repository)
 
 ## Goals
 
 The main goal of this repository is to provide up to date examples for a full-stack application enabling enterprise-grade development following all recent best practices in various areas and features, such as:
 
-- nx monorepo - open-source build system that provides tools and techniques for enhancing developer productivity, optimizing CI performance, and maintaining code quality
-- typescript - leverage typescript, e2e, for client and server-side development
-- authentication - complete sign-up and account management system with Firebase Authentication
-- cloud firestore - flexible, scalable NoSQL cloud database to store and sync data for client and server-side development
-- cloud functions - automatically run backend code in response to events triggered by Firebase features and HTTPS requests in a safe, secure manner
-- web3 - real-world examples to interact with Web3 and blockchain technology through the Moralis Api
-- progressive web application - use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps
-- push notifications - cross-platform messaging solution that lets you reliably send messages to desktop, mobile, and web applications
-- icons - easy, performant customizable icon solution that doesn't sacrifice quality and maintains brand requirements
-- documentation - extensive documentation of development best practices, workflows, and guides that educate and inform users on how to achieve development goals
+- Nx monorepo - open-source build system that provides tools and techniques for enhancing developer productivity, optimizing CI performance, and maintaining code quality
+- Typescript - leverage typescript, e2e, for client and server-side development
+- Authentication - complete sign-up and account management system with Firebase Authentication
+- Cloud Firestore - flexible, scalable NoSQL cloud database to store and sync data for client and server-side development
+- Cloud Functions - automatically run backend code in response to events triggered by Firebase features and HTTPS requests in a safe, secure manner
+- Web3 - real-world examples to interact with Web3 and blockchain technology through the Moralis Api
+- Progressive Web Application - use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps
+- Push notifications - cross-platform messaging solution that lets you reliably send messages to desktop, mobile, and web applications
+- Icons - easy, performant customizable icon solution that doesn't sacrifice quality and maintains brand requirements
+- Documentation - extensive documentation of development best practices, workflows, and guides that educate and inform users on how to achieve development goals
 - `@ngrx/store` - state management including reducers, actions, selectors
 - `@ngrx/effects` - for implementation of side effects like `http` requests, logging, notifications, analytics, ect
 - `@ngrx/router-store` - to connect the Angular Router to @ngrx/store
 - `@ngrx/store-devtools` - to enable a powerful time-travelling debugger.
 - `@angular/material` - material design component library, theming, rapid UI development
-- routing
+- Routing
 - Angular CLI configuration (prod build, budgets, ...)
 
 ## Stack
