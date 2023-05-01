@@ -1,8 +1,5 @@
 import { isDevMode, NgModule } from '@angular/core';
-import {
-	ScreenTrackingService,
-	UserTrackingService
-} from '@angular/fire/analytics';
+import { ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -21,15 +18,12 @@ import { AboutModule } from '@full-stack-typescript/features/about';
 import { AccountModule } from '@full-stack-typescript/features/account';
 import { AuthModule } from '@full-stack-typescript/features/auth';
 import { BreakpointModule } from '@full-stack-typescript/features/breakpoint';
+import { RemoteConfigModule } from '@full-stack-typescript/features/remote-config';
 import { EffectsModule } from '@ngrx/effects';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import {
-	HIGHLIGHT_OPTIONS,
-	HighlightModule,
-	HighlightOptions
-} from 'ngx-highlightjs';
+import { HIGHLIGHT_OPTIONS, HighlightModule, HighlightOptions } from 'ngx-highlightjs';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
@@ -70,6 +64,7 @@ import { appRoutes } from './app.routes';
 		AboutModule,
 		AuthModule,
 		AccountModule,
+		RemoteConfigModule,
 		AppFooterComponent,
 		AppSidenavComponent,
 		AppToolbarComponent,

@@ -52,6 +52,9 @@
 			"@full-stack-typescript/features/login": [
 				"libs/features/login/src/index.ts"
 			],
+			"@full-stack-typescript/features/remote-config": [
+				"libs/features/remote-config/src/index.ts"
+			],
 			"@full-stack-typescript/features/sign-up": [
 				"libs/features/sign-up/src/index.ts"
 			],
